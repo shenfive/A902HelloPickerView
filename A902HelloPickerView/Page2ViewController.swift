@@ -11,6 +11,7 @@ class Page2ViewController: UIViewController {
 
     @IBOutlet weak var theLabel: UILabel!
     
+    @IBOutlet weak var dst: UILabel!
     var a = ""
     var b = ""
     
@@ -18,10 +19,17 @@ class Page2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("page2 \(a) \(b)")
-        theLabel.text = " \(a) 型  \(b) 的命運是..."
+        dst.isHidden = true
     }
     
-
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        theLabel.text = " \(a) 型  \(b) 的命運是..."
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+            self.dst.isHidden = false
+        })
+        
+    }
 
 }

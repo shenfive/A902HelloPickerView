@@ -18,9 +18,14 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let nextVC = segue.destination as? Page2ViewController{
-            nextVC.a = selectedBloudType
-            nextVC.b = selectedAst
+        switch segue.identifier{
+        case "goNextPage":
+            if let nextVC = segue.destination as? Page2ViewController{
+                nextVC.a = selectedBloudType
+                nextVC.b = selectedAst
+            }
+        default:
+            break
         }
     }
     
