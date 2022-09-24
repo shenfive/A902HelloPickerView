@@ -23,8 +23,18 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
 
     //MARK:Picker Delegate & DataSource
     
+    //選擇某項之後
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("row:\(row)  com:\(component)")
+        if pickerView.selectedRow(inComponent: 0) != 0
+            && pickerView.selectedRow(inComponent: 1) != 0{
+            print("go Next Page")
+            performSegue(withIdentifier: "goNextPage", sender: self)
+            
+        }else{
+            print("stay")
+        }
+        
     }
     
     
