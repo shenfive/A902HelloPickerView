@@ -16,6 +16,11 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     }
 
     //MARK:Picker Delegate & DataSource
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("row:\(row)  com:\(component)")
+    }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return "欄：\(component) 行:\(row)"
     }
