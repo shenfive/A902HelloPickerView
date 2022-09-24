@@ -12,8 +12,17 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     var astrological = ["請選擇你的星座","白羊宮","金牛宮","雙子宮","巨蟹宮","獅子宮","處女宮","天秤宮","天蠍宮","射手宮","摩羯宮","水瓶宮","雙魚宮"]
     var bloudType = ["請選擇你的血型","A","B","O","AB"]
-
     
+    var selectedBloudType = ""
+    var selectedAst = ""
+    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nextVC = segue.destination as? Page2ViewController{
+            nextVC.a = selectedBloudType
+            nextVC.b = selectedAst
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +38,10 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         if pickerView.selectedRow(inComponent: 0) != 0
             && pickerView.selectedRow(inComponent: 1) != 0{
             print("go Next Page")
-            performSegue(withIdentifier: "goNextPage", sender: self)
+            selectedBloudType = bloudType[pickerView.selectedRow(inComponent: 0)]
+            selectedAst = astrological[pickerView.selectedRow(inComponent: 1)]
             
+            performSegue(withIdentifier: "goNextPage", sender: self)
         }else{
             print("stay")
         }

@@ -41,21 +41,45 @@
             </objects>
             <point key="canvasLocation" x="913.84615384615381" y="-28.436018957345969"/>
         </scene>
-        <!--View Controller-->
+        <!--Page2 View Controller-->
         <scene sceneID="f6Y-7Z-6MJ">
             <objects>
-                <viewController id="T64-zi-7Bk" sceneMemberID="viewController">
+                <viewController id="T64-zi-7Bk" customClass="Page2ViewController" customModule="A902HelloPickerView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HDU-iP-1ic">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiK-oV-3o5">
+                                <rect key="frame" x="20" y="110.99999999999999" width="350" height="51.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大吉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tku-eB-oNO">
+                                <rect key="frame" x="144.66666666666666" y="392" width="100.66666666666666" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="KaG-0k-L8Q"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="tku-eB-oNO" firstAttribute="centerY" secondItem="HDU-iP-1ic" secondAttribute="centerY" id="0hd-Iy-Pbl"/>
+                            <constraint firstItem="tku-eB-oNO" firstAttribute="centerX" secondItem="HDU-iP-1ic" secondAttribute="centerX" id="Imm-Kv-gfx"/>
+                            <constraint firstItem="KaG-0k-L8Q" firstAttribute="trailing" secondItem="uiK-oV-3o5" secondAttribute="trailing" constant="20" id="dOo-mT-2T1"/>
+                            <constraint firstItem="uiK-oV-3o5" firstAttribute="top" secondItem="KaG-0k-L8Q" secondAttribute="top" constant="20" id="hqx-XR-VuI"/>
+                            <constraint firstItem="uiK-oV-3o5" firstAttribute="leading" secondItem="KaG-0k-L8Q" secondAttribute="leading" constant="20" id="ntS-UA-QfK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bne-2D-6Qh"/>
+                    <connections>
+                        <outlet property="theLabel" destination="uiK-oV-3o5" id="YQt-0e-3XH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4LP-f7-Iot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1868" y="-28"/>
+            <point key="canvasLocation" x="1867.6923076923076" y="-28.436018957345969"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KbT-fB-BjT">
